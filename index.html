@@ -52,6 +52,10 @@
 </head>
 <body>
 
+   <audio id="bg-music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+   </audio>
+
   <div class="card">
     <img src="me.png" alt="cute" style="
   width:90px;
@@ -80,9 +84,16 @@
     yesBtn.addEventListener("click", () => {
       msg.innerHTML = "Yayyyy 💕 See you on Valentine’s Day 😍";
     });
+  const music = document.getElementById("bg-music");
+
+  document.addEventListener("click", () => {
+    music.volume = 0.4;
+    music.play();
+  }, { once: true });
   </script>
 
 </body>
 </html>
+
 
 
